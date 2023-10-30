@@ -1,0 +1,84 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary">
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        Volver
+      </ion-button>
+      <ion-buttons slot="end">
+        <ion-button>Sign up</ion-button>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-content>
+    <div id="header">
+      <h1>Login</h1>
+      <img src="assets/icon/2.jpg">
+    </div>
+
+    <form id="#form">
+      <app-input placeholder="Hotmail"></app-input>
+      <app-input placeholder="Nombre"></app-input>
+      <app-input placeholder="Apellidos"></app-input>
+      <app-input type="password" placeholder="Contraseña"></app-input>
+      <app-input type="password" placeholder=" Confirmar contraseña"></app-input>
+      <ion-button expand="block" shape="round" [routerLink]="['/inicio']">Registrate</ion-button>
+      <ion-button expand="block" shape="round" [routerLink]="['/login']">Inicia Sesion</ion-button>
+    </form>
+  </ion-content>    hacer que te lleve automaticamente al login despues de apretar registrate
+ChatGPT
+Si deseas redirigir automáticamente al usuario a la página de inicio de sesión después de hacer clic en el botón "Regístrate", puedes utilizar la propiedad [routerLink] para navegar a la página de inicio de sesión. Asegúrate de que la propiedad [routerLink] apunte a la URL correcta de la página de inicio de sesión en tu aplicación.
+
+Aquí tienes un ejemplo de cómo puedes hacerlo en tu HTML:
+
+html
+Copy code
+<ion-button expand="block" shape="round" [routerLink]="['/inicio']">Registrate</ion-button>
+<ion-button expand="block" shape="round" [routerLink]="['/login']">Inicia Sesion</ion-button>
+Asegúrate de que [routerLink] para "Registrate" apunte a la URL correcta de la página de inicio de sesión en lugar de '/inicio' si eso es lo que necesitas. Después de hacer esta configuración, cuando los usuarios hagan clic en "Regístrate", serán redirigidos automáticamente a la página de inicio de sesión.
+
+
+
+
+User
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary">
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        Volver
+      </ion-button>
+      <ion-buttons slot="end">
+        <ion-button>Sign up</ion-button>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-content>
+    <div id="header">
+      <h1>Login</h1>
+      <img src="assets/icon/2.jpg">
+    </div>
+
+    <form id="#form">
+      <app-input placeholder="Hotmail"></app-input>
+      <app-input placeholder="Nombre"></app-input>
+      <app-input placeholder="Apellidos"></app-input>
+      <app-input type="password" placeholder="Contraseña"></app-input>
+      <app-input type="password" placeholder=" Confirmar contraseña"></app-input>
+      <ion-button expand="block" shape="round" [routerLink]="['/inicio']">Registrate</ion-button>
+      <ion-button expand="block" shape="round" [routerLink]="['/login']">Inicia Sesion</ion-button>
+
+    </form>
+  </ion-content>

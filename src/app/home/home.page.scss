@@ -1,0 +1,17 @@
+/* Define una fuente personalizada para los títulos */
+.titulo-personalizado {
+    font-family: '.woff', sans-serif; /* Reemplaza 'NombreDeTuFuente' por el nombre real de tu fuente */
+    #header {
+      img {
+        width: 50px; // Ajusta el ancho de la imagen
+        height: 50px; // Ajusta la altura de la imagen
+        border-radius: 50%; // Esto hace que la imagen tenga forma circular
+      }
+    }
+  }ion-content {
+    background-image: url('/assets/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
