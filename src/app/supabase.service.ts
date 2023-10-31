@@ -85,4 +85,24 @@ export class SupabaseService {
   createLoader() {
     return this.loadingCtrl.create();
   }
+  insertRestaurant(restaurant: any) {
+    return this.supabase.from('restaurantes').upsert([restaurant]);
+  }
+// Función para eliminar un restaurante por su nombre
+async deleteRestaurantByName(restaurantName: string) {
+  try {
+    const { data, error } = await this.supabase.from('restaurantes')
+      .delete()
+      .eq('nombre', restaurantName);
+    if (error) {
+      throw error;
+    }
+    return data;
+  } catch (error) {
+    throw error;
+  }
 }
+
+
+}
+

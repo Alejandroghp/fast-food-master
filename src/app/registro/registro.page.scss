@@ -39,4 +39,9 @@ ion-content{
         --box-shadow: none;
      }
   }
-}
+}.warning-message {
+   color: red; /* Cambia el color del texto a rojo o el color que prefieras */
+   font-size: 14px; /* Ajusta el tamaño de fuente según tus preferencias */
+   margin-top: 8px; /* Agrega un margen superior para separar el mensaje del campo de entrada */
+ }
+ 

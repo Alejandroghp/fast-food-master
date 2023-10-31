@@ -1,4 +1,39 @@
-<ion-content class="ion=padding">
+<ion-menu side="start" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-item>
+      <ion-label position="floating">Nuevo Restaurante</ion-label>   
+      <ion-input [(ngModel)]="newRestaurante" type="text"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="addRestaurante()">Agregar un Restaurante</ion-button>
+
+    <ion-list>
+      <ion-item *ngFor="let restaurante of restaurantes; let i = index">
+        {{ restaurante }}
+        <ion-button fill="clear" (click)="removeRestaurante(restaurante)">Eliminar</ion-button>
+      </ion-item>
+    </ion-list>
+    
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main-content"></ion-router-outlet>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false">
+        <ion-icon name="menu-outline"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>Menú</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
   <div id="header" class="ion-margin-bottom">
     <ion-icon id="menu-icon" name="grid-outilne"></ion-icon>
     <div id="location">
@@ -16,43 +51,37 @@
     <ion-img src="../../../assets/banner.jpg"></ion-img>
   </div>
   <div class="sub-title">
-    <h3>¿Te estas sintiendo con hambre?</h3>
+    <h3>¿Te estás sintiendo con hambre?</h3>
     <p>Si te sientes con hambre es momento de pedir algo para comer</p>
-<div class="middle-section ion-padding">
-  <h3>Que se te antoja hoy?</h3>
-  <div class="content">
-    <ion-row>
-      <ion-col size="4">
-        <img src="/assets/pizza.png" alt="">
-        <p>Pizzas</p>
-      </ion-col>
-      <ion-col size="4">
-        <img src="/assets/hamburguesa.jpg" alt="">
-        <p>Hamburguesa</p>
-      </ion-col>
-      <ion-col size="4">
-        <img src="/assets/ensalada.jpg" alt="">
-        <p>Ensaladas</p>
-      </ion-col>
-    </ion-row>
+    <div class="middle-section ion-padding">
+      <h3>¿Qué se te antoja hoy?</h3>
+      <div class="content">
+        <ion-row>
+          <ion-col size="4">
+            <img src="/assets/pizza.png" alt="">
+            <p>Pizzas</p>
+          </ion-col>
+          <ion-col size="4">
+            <img src="/assets/hamburguesa.jpg" alt="">
+            <p>Hamburguesa</p>
+          </ion-col>
+          <ion-col size="4">
+            <img src="/assets/ensalada.jpg" alt="">
+            <p>Ensaladas</p>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+    <div class="bottom-section ion-margin">
+      <img src="/assets/girl.png" alt="">
+      <div class="content">
+        <h3>Do your own test</h3>
+        <p>Follow the instructions to do your own test</p>
+      </div>
+    </div>
+    <div class="list-title">
+      <h3 class="title">Ofertas Exclusivas</h3>
+      <a href="">Ver Todo</a>
+    </div>
   </div>
-</div>
-<div class="bottom-section ion-margin">
-  <img src="/assets/girl.png" alt="">
-  <div class="content">
-    <h3>Do you own test</h3>
-    <p>Follow the instruction to do your own test</p>
-  </div>
-</div>
-
- 
-
-  <div class="list-title">
-    <h3 class="title">Ofertas Exclusivas</h3>
-    <a href="">Ver Todo</a>
-  </div>
-
-  
-
-
-
+</ion-content>
